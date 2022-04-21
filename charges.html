@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charges</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-family: 'Poppins', sans-serif;
+    }
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* border-bottom: 2px solid brown; */
+    }
+    nav ul{
+        width: 800px;
+        position: relative;
+        top: 18px;
+        
+    }
+    .nav-links{
+        display: flex; 
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background-color: blue;
+        /* text-decoration: none; */
+        /* z-index: -100; */
+        
+    }
+    .logo{
+        position: relative;
+        left: 10px;
+        color: blue;
+        font-size: 25px;
+    }
+    .nav-links a{
+        text-decoration: none;
+        color: aliceblue;
+    }
+    .intro{
+text-align: center;
+position: relative;
+top: 20px;
+color: darkblue;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+position: relative;
+top: 20px;        }
+.first{
+    text-align: center;
+    width: 50%;
+    color: darkblue;
+    background-color: skyblue;
+    border-radius: 10px;
+}
+.second{
+    text-align: center;
+    width: 50%;
+    color: darkblue;
+    background-color: skyblue;
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+}
+.third{
+    text-align: center;
+    width: 50%;
+    color: darkblue;
+    background-color: skyblue;
+    border-radius: 10px;
+    position: relative;
+    top: 20px;
+}
+#grp{
+    position: absolute;
+    right: 15px;
+    top: 30vh;
+    height: 70%;
+    width: 40%;
+}
+@media screen and (max-width:800px) {
+    .first{
+        width:100%
+    }
+    .second{
+        width:100%
+    }
+    .third{
+        width:100%
+    }
+    #grp{
+        display: none;
+    }
+}
+footer{
+    position: relative;
+    top: 50px;
+    text-align: center;
+    background-color: blue;
+    color: aliceblue;
+}
+.bu{
+    /* align-items: center; */
+display: flex;
+width: 100%;
+justify-content: center;
+
+position: relative;
+top: 40px;
+}
+button{
+    height: 25px;
+    position: relative;
+    top: 5px;
+    background:transparent;
+    border: 3px solid blue;
+    /* font-weight: 800; */
+    color: blue;
+    cursor: pointer;
+}
+button:hover{
+    background-color: skyblue;
+    color: darkblue;
+}
+#darked{
+    background: transparent;
+     color: blue;
+     position: absolute;
+     right: 4%;
+     border: 2px soild blue;
+}
+#lighted{
+    background: transparent;
+     color: white;
+     position: absolute;
+     right: 4%;
+     border: 2px solid white;
+     display: none;
+}
+
+    </style>
+</head>
+<body>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Amlan Dev</h1>
+        </div>
+        <ul>
+            <li class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">Charges</a>
+                <a href="amlancontact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="intro">
+        <button onclick="dark()" id="darked" >Dark Theme</button>
+        <button onclick="light()" id="lighted" >light Theme</button>
+        <h2>MY CHARGES</h2>
+        <p>Here are my charges for building an website for you.</p>
+    </div>
+    <div class="main">
+        <div class="first">
+            <h1>Basic Plan</h1>
+            <h2 style="font-size: 25px;">20$</h2>
+            <li>One Page Website</li>
+            <li>Revision: 1 time</li>
+            <li>One Day Delivery</li>
+        </div>
+        <div class="second">
+            <h1>Standard Plan</h1>
+            <h2 style="font-size: 25px;">40$</h2>
+            <li>Three Pages Website</li>
+            <li>Revision: 2 time</li>
+            <li>Three Days Delivery</li>
+        </div>
+        <div class="third">
+            <h1>Premium Plan</h1>
+            <h2 style="font-size: 25px;">60$</h2>
+            <li>Five Pages Website</li>
+            <li>Revision: 4 time</li>
+            <li>One Week Delivery</li>
+        </div>
+    </div>
+    <img src="graphic2.jpg" id="grp">
+    <div class="bu">
+    <a href="amlancontact.html"><button>Contact Me</button></a>
+    </div>
+    <footer>
+        <p>copyright Amlan Dev || All Rights Reserved 2022</p>
+    </footer>
+    <script>
+        // let main = document.getElementsByClassName('main');
+        let elemclass = document.getElementsByTagName('body');
+        let elemclass1 = document.getElementsByClassName('intro')
+        let elemclass2 = document.getElementById('lighted')
+let elemclass3 = document.getElementById('darked')
+        function dark(){
+            elemclass[0].style.background = "black"
+            elemclass1[0].style.color = "white"
+            elemclass2.style.display ="block"
+            elemclass3.style.display ="none"
+
+        }
+        function light(){
+            elemclass[0].style.background = "white"
+            elemclass1[0].style.color = "blue"
+            elemclass2.style.display ="none"
+            elemclass3.style.display ="block"
+
+        }
+    </script>
+</body>
+</html>

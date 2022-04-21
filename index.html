@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>The Amlan Dev</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+        nav{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* border-bottom: 2px solid brown; */
+        }
+        nav ul{
+            width: 800px;
+            position: relative;
+            top: 18px;
+            
+        }
+        .nav-links{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background-color: blue;
+            /* text-decoration: none; */
+            /* z-index: -100; */
+            
+        }
+        .logo{
+            position: relative;
+            left: 10px;
+            color: blue;
+            font-size: 25px;
+        }
+        .nav-links a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+        .intro{
+text-align: center;
+/* width: 50%; */
+position: relative;
+top: 20px;
+color: darkblue;
+/* background-image: url("grphic1.jpg"); */
+background-size: cover;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+position: relative;
+top: 20px;        }
+.first{
+    text-align: center;
+    width: 50%;
+    color: darkblue;
+    background-color: skyblue;
+    border-radius: 10px;
+}
+.second{
+    text-align: center;
+    width: 50%;
+    color: darkblue;
+    background-color: skyblue;
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+}
+.third{
+    text-align: center;
+    width: 50%;
+    color: darkblue;
+    background-color: skyblue;
+    border-radius: 10px;
+    position: relative;
+    top: 20px;
+}
+#grp{
+    position: absolute;
+    right: 5px;
+    height: 80%;
+}
+@media screen and (max-width:800px) {
+    .first{
+        width:100%
+    }
+    .second{
+        width:100%
+    }
+    .third{
+        width:100%
+    }
+    #grp{
+        display: none;
+    }
+}
+footer{
+    position: relative;
+    top: 50px;
+    text-align: center;
+    background-color: blue;
+    color: aliceblue;
+}
+#darked{
+    background: transparent;
+     color: blue;
+     position: absolute;
+     right: 4%;
+     border: 2px soild blue;
+}
+#lighted{
+    background: transparent;
+     color: white;
+     position: absolute;
+     right: 4%;
+     border: 2px solid white;
+     display: none;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Amlan Dev</h1>
+        </div>
+        <ul>
+            <li class="nav-links">
+                <a href="#">Home</a>
+                <a href="charges.html">Charges</a>
+                <a href="amlancontact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="intro">
+        <button onclick="dark()" id="darked" >Dark Theme</button>
+        <button onclick="light()" id="lighted" >light Theme</button>
+        <h2>Introduction</h2>
+        <p>I am a passionate Front End Web Devloper looking for projects to work with. If need an website about Model Portfolio, Photography Portfolio, Personal Blog then I am the best person to hire.</p>
+    </div>
+    <div class="main">
+        <div class="first">
+            <h1>Model Portfolio</h1>
+            <p>If you are looking for some to make your Modelling Portfolio as Awesome as possible then I am here for you.</p>
+        </div>
+        <div class="second">
+            <h1>Photography Portfolio</h1>
+            <p>If you are a photographer and want to showcase then you are definetly gonna need an website. If you need a then I will make one for you.</p>
+        </div>
+        <div class="third">
+            <h1>Personal Blog</h1>
+            <p>A personal is a very good way of sharing your knowledge to the people of internet. If you wanna build your own personal blog then I will make one for you. </p>
+        </div>
+        <img src="grphic1.jpg" id="grp">
+    </div>
+    <footer>
+        <p>copyright Amlan Dev || All Rights Reserved 2022</p>
+    </footer>
+    <script>
+        // let main = document.getElementsByClassName('main');
+        let elemclass = document.getElementsByTagName('body');
+        let elemclass1 = document.getElementsByClassName('intro')
+        let elemclass2 = document.getElementById('lighted')
+let elemclass3 = document.getElementById('darked')
+        function dark(){
+            elemclass[0].style.background = "black"
+            elemclass1[0].style.color = "white"
+            elemclass2.style.display ="block"
+            elemclass3.style.display ="none"
+
+        }
+        function light(){
+            elemclass[0].style.background = "white"
+            elemclass1[0].style.color = "blue"
+            elemclass2.style.display ="none"
+            elemclass3.style.display ="block"
+
+        }
+    </script>
+</body>
+</html>
